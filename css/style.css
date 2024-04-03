@@ -1,22 +1,186 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-* {
-  margin: 0;
-  padding: 0;
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: small;
+  color: black;
+}
+body ul {
+  list-style: none !important;
+  color: black;
+}
+body a {
+  text-decoration: none !important;
+  color: black;
+}
+body .navbar {
+  border-bottom: 1px solid rgb(59, 58, 58);
+}
+body .navbar .nav-search {
+  padding: 0.3rem 0.4rem;
+}
+body .navbar .nav-search div {
+  border: 1px solid gray;
+  border-radius: 5px;
   overflow: hidden;
-  box-sizing: border-box;
-  text-decoration: none;
+}
+body .navbar .nav-search div .input-group-text {
+  padding: 0.3rem 0.6rem;
+}
+body .navbar .navbar-nav-right {
   list-style: none;
 }
-
-html {
-  scroll-behavior: smooth;
+body .navbar .navbar-nav-right li a {
+  padding: 0.3rem 0.4rem;
+}
+body .navbar .navbar-nav-right .user-img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+body .navbar .bottom-menu .count-repo {
+  border: 1px solid black;
+  background-color: rgb(224, 224, 224);
+}
+body .navbar .bottom-menu i {
+  font-size: 18px;
+}
+body .navbar .bottom-menu li {
+  position: relative;
+}
+body .navbar .bottom-menu li.active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background-color: orangered;
+  bottom: -8px;
+  position: absolute;
 }
 
-body {
-  background-color: #bbbebe;
-  font-family: "Poppins", sans-serif;
+.off-menu {
+  width: 21% !important;
+  min-width: 200px !important;
 }
-body h1, body h2, body h3, body h4, body h5 {
-  font-family: "Exo 2", sans-serif;
+.off-menu .offcanvas-body ul {
+  border-bottom: 1px solid gray;
+  padding-bottom: 10px;
+}
+.off-menu .offcanvas-body ul li a i {
+  font-size: 1.1rem;
+  margin-right: 5px;
+}
+.off-menu .offcanvas-footer {
+  padding: 20px;
+}
+.off-menu .offcanvas-footer a {
+  color: rgb(5, 5, 177);
+  font-size: 10px;
+}
+
+.main {
+  margin-top: 50px;
+}
+.main .main-container .bi-people {
+  margin-bottom: 3px;
+}
+.main .main-container .user-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border: 3px solid black;
+}
+.main .main-container .social {
+  border-bottom: 1px solid rgb(99, 98, 98);
+}
+.main .main-container .social i {
+  font-size: 18px;
+  margin-right: 5px;
+}
+.main .main-container .pins {
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 15px 20px;
+}
+.main .main-container .pins i {
+  font-size: 15px;
+}
+.main .main-container .pins a {
+  color: #073F97;
+  font-weight: 500;
+  font-size: 15px;
+}
+.main .main-container .pins p {
+  margin-bottom: 12px;
+}
+.main .main-container .pins div > p {
+  margin-bottom: 7px;
+}
+.main .main-container .public {
+  border: 1px solid black;
+  padding: 2px 8px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+  margin-left: 5px;
+}
+.main .main-container .about {
+  border: 1px solid gray;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.main .main-container .about h2, .main .main-container .about h4 {
+  border-bottom: 1px solid gray;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+.main .main-container .about h4 {
+  margin-top: 20px;
+}
+.main .main-container .about .medium a {
+  border-radius: 4px;
+  padding: 2px 8px;
+  background-color: black;
+  color: white;
+  font-size: 11px;
+}
+.main .main-container .about .linkedin a {
+  border-radius: 4px;
+  padding: 2px 8px;
+  background-color: #0F7AB2;
+  color: white;
+  font-size: 11px;
+}
+.main .main-container .green-repos {
+  margin-top: 20px;
+}
+.main .main-container .green-repos .repo-img {
+  border: 1px solid gray;
+  border-radius: 8px 8px 0 0;
+  padding: 8px;
+  overflow: hidden;
+}
+.main .main-container .green-repos .repo-img img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .main .main-container .user-img {
+    width: 120px;
+    height: auto;
+  }
+}
+footer {
+  padding-bottom: 20px;
+}
+footer li a {
+  font-size: 11px;
+}
+
+.active {
+  font-weight: 600;
 }
